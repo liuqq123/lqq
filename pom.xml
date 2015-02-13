@@ -14,5 +14,6 @@
         <module>demo-mybatis</module>
         <module>demo-spring</module>
         <module>demo-angular</module>
+        <module>demo-webUi</module>
     </modules>
 </project>
