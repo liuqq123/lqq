@@ -13,7 +13,10 @@
         <module>demo-java</module>
         <module>demo-mybatis</module>
         <module>demo-spring</module>
-        <module>demo-angular</module>
-        <module>demo-webUi</module>
+        <module>demo-www</module>
     </modules>
+
+    <name>demo :: modules :: parent</name>
+
+
 </project>
