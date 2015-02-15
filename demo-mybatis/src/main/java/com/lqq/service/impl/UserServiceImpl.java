@@ -35,6 +35,7 @@ public class UserServiceImpl extends BaseServiceImpl implements UserService {
         SqlSession sqlSession = super.getSession().openSession();
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         userMapper.addUser(user);
+        sqlSession.commit();
     }
 
     @Override
@@ -42,6 +43,7 @@ public class UserServiceImpl extends BaseServiceImpl implements UserService {
         SqlSession sqlSession = super.getSession().openSession();
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         userMapper.updateUser(user);
+        sqlSession.commit();
     }
 
     @Override
@@ -49,6 +51,7 @@ public class UserServiceImpl extends BaseServiceImpl implements UserService {
         SqlSession sqlSession = super.getSession().openSession();
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         userMapper.deleteUserById(id);
+        sqlSession.commit();
         return 0;
     }
 }
