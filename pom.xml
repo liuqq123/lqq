@@ -12,7 +12,6 @@
         <module>demo-parent</module>
         <module>demo-java</module>
         <module>demo-mybatis</module>
-        <module>demo-spring</module>
         <module>demo-www</module>
     </modules>
 
