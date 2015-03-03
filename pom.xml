@@ -13,6 +13,7 @@
         <module>demo-java</module>
         <module>demo-mybatis</module>
         <module>demo-www</module>
+        <module>demo-spring</module>
     </modules>
 
     <name>demo :: modules :: parent</name>
