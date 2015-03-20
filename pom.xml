@@ -15,6 +15,7 @@
         <module>demo-www</module>
         <module>demo-spring</module>
         <module>demo-angularui</module>
+        <module>demo-js</module>
     </modules>
 
     <name>demo :: modules :: parent</name>
