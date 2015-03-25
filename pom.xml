@@ -18,7 +18,7 @@
         <module>demo-js</module>
     </modules>
 
-    <name>demo :: modules :: parent</name>
+    <name>demo :: modules</name>
 
 
 </project>

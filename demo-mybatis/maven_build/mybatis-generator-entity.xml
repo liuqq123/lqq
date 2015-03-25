@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<properties resource="${db.config.file}" />
+	<context id="ec.user" targetRuntime="MyBatis3">
+		<plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin"></plugin>
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+		<plugin type="com.gfa4j.mybatis.generator.plugins.MySqlPaginationPlugin"></plugin>
+		<plugin type="com.gfa4j.mybatis.generator.plugins.ModelExamplePlugin"></plugin>
+		<!--<plugin type="com.gfa4j.mybatis.generator.plugins.ModelAnnotationPlugin" />-->
+		<plugin type="com.gfa4j.mybatis.generator.plugins.CommonFieldModelAnnotationPlugin" />
+		<plugin type="com.gfa4j.mybatis.generator.plugins.MapperAndSqlMapGeneratorPlugin" />
+		<!-- 取消注释 -->
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!-- 配置连接数据信息 -->
+		<jdbcConnection driverClass="${jdbc.driverClassName}" connectionURL="${jdbc.url}" userId="${jdbc.username}"
+			password="${jdbc.password}" />
+		<!-- 配置自动生成的Model的保存路径与其它参数 -->
+		<javaModelGenerator targetPackage="${package.path}.model" targetProject="${java.file.dir}">
+			<property name="rootClass" value="com.gfa4j.mybatis.model.BaseModel" />
+		</javaModelGenerator>
+		<!-- 配置自动生成的Mappper.xml映射的保存路径与其它参数 -->
+		<sqlMapGenerator targetPackage="${package.path}.mapper" targetProject="${resources.file.dir}" />
+		<!-- 配置自动生成的Mappper.java接口的保存路径与其它参数 -->
+		<javaClientGenerator type="XMLMAPPER" targetPackage="${package.path}.mapper" targetProject="${java.file.dir}">
+			<property name="rootInterface" value="com.gfa4j.mybatis.mapper.BaseMapper" />
+		</javaClientGenerator>
+		<!-- 生成表对应的操作与实体对象 -->
+		<table tableName="test_employee">
+			<columnOverride column="id" property="id" />
+		</table>
+		<!--<table tableName="tom_contacts_his">
+			<columnOverride column="id" property="contacts_his_id" />
+		</table>-->
+		 <!--<table tableName="EC_GOODS_DESC">
+			<columnOverride column="id" property="ecGoodsDescId" />
+		</table>
+		<table tableName="EC_GOODS_ITEM">
+			<columnOverride column="id" property="ecGoodsItemId" />
+		</table>
+		<table tableName="EC_GOODS_PIC">
+			<columnOverride column="id" property="ecGoodsPicId" />
+		</table>
+		<table tableName="EC_GOODS_SIZE">
+			<columnOverride column="id" property="ecGoodsSizeId" />
+		</table>
+		<table tableName="EC_GOODS_STYLE">
+			<columnOverride column="id" property="ecGoodsStyleId" />
+		</table> -->
+	</context>
+</generatorConfiguration>
